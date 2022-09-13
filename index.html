@@ -11,45 +11,87 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-sm-6 ">
-        <h1>hello world</h1>
+  <div class="container d-flex flex-column  ">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mb-4 pt-3">
+        <h1 class="text-break">ToDo List</h1>
+      </div>
+    </div>
 
-        <table class="table table-striped table-hover table-dark">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="row d-flex justify-content-center">
+
+    
+    <div class="col-12 col-sm-10 col-md-8 bg-img-color  px-sm-5 px-3">
+
+   
+    <div class="row d-flex justify-content-center pb-4 ">
+      <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 p-0 ">
+        <div class="form-row d-flex align-items-center wrap-nowrap">
+          <div class="col-9 col-sm-9">
+            <!-- Input user enter items here -->
+            <form onsubmit="addItems(); return false;">
+            <input type="text" class="form-control form-control-md" id="item" placeholder="Enter Items....">
+          </form>
+          </div>
+          <div class="col-3 col-sm-3 d-flex align-items-center justify-content-end pr-2">
+            <!-- ADD ITEMS  BUTTON HERE  -->
+            <button type="submit" onclick="addItems()"
+              class="btn btn-outline-success mr-1 px-1 px-md-2 px-lg-2 text-lead font-weight-lighter"><i
+                class="fa-solid fa-square-plus px-1"></i></button>
+            <!-- DELETE ALL BUTTON HERE -->
+            <button type="button" onclick="deleteAll()"
+              class="btn btn-outline-danger ml-1 px-1 px-md-2 w-45 px-lg-2 text-lead font-weight-lighter"><i
+                class="fa-solid fa-trash-can px-1"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-center pt-1 ">
+      <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 p-0" id="display">
+
+
+
+        <!-- Main row which develop in JAVASCRIPT  -->
+        <!-- <div class="form-row d-flex align-items-start wrap-nowrap rounded bck-trans mb-1 pt-1">
+          <div class="col-9 col-sm-9 m-0 pr-2 text-break ">
+            <span class="text-break text-justify text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dolores lore</span>
+          </div>
+          <div class="col-3 col-sm-3 d-flex align-items-start justify-content-center m-0 p-0 ">
+            <button type="button"
+              class="btn btn-outline-success mr-2 px-1 px-md-2 px-lg-3 text-lead font-weight-lighter"><i
+                class="fa-solid fa-pen px-1"></i></button>
+            <button type="button"
+              class="btn btn-outline-danger px-1 px-md-2 w-45 px-lg-3 text-lead font-weight-lighter"><i
+                class="fa-solid fa-trash-can px-1"></i></button>
+          </div>
+        </div> -->
+
+
+
+        <!-- <div class="form-row d-flex align-items-start wrap-nowrap rounded bck-trans mb-1 pt-1">
+          <div class="col-9 col-sm-9 m-0 pr-2 text-break ">
+            <span class="text-break text-justify text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dolores lore</span>
+          </div>
+          <div class="col-3 col-sm-3 d-flex align-items-start justify-content-center m-0 p-0 ">
+            <button type="button"
+              class="btn btn-outline-success mr-2 px-1 px-md-2 px-lg-3 text-lead font-weight-lighter"><i
+                class="fa-solid fa-pen px-1"></i></button>
+            <button type="button"
+              class="btn btn-outline-danger px-1 px-md-2 w-45 px-lg-3 text-lead font-weight-lighter"><i
+                class="fa-solid fa-trash-can px-1"></i></button>
+          </div>
+        </div> -->
+      </div>
+    </div>
       </div>
     </div>
   </div>
